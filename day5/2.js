@@ -11,7 +11,7 @@ let steps = 0;
 const jump = (startIndex) => {
     const nextIndex = startIndex + input[startIndex];
     steps++;
-    nextIndex >= startIndex + 3 ? input[startIndex] = input[startIndex] - 1 : input[startIndex] = input[startIndex] + 1;
+    nextIndex >= startIndex + 3 ? input[startIndex] -= 1 : input[startIndex] +=1;
     nextIndex <= input.length - 1 ? process.nextTick(() => jump(nextIndex)) : console.log(steps);
 }
 

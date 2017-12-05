@@ -10,8 +10,8 @@ const input = fs
 let steps = 0;
 const jump = (startIndex) => {
     const nextIndex = startIndex + input[startIndex];
-    input[startIndex] = input[startIndex] + 1;
     steps++;
+    input[startIndex] += 1; 
     nextIndex <= input.length - 1 ? process.nextTick(() => jump(nextIndex)) : console.log(steps);
 }
 
